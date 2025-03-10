@@ -19,6 +19,7 @@ class PermissionModel(db.Model):
     id = Column(Integer, primary_key=True)
     code = Column(String, comment="")
     name = Column(String, comment="")
+    user_id = Column(Integer)
     ctime = Column(BigInteger, nullable=False, default=time.time)
     utime = Column(BigInteger, default=time.time, onupdate=time.time)
 
@@ -27,6 +28,7 @@ class PermissionModel(db.Model):
             "id": self.id,
             "code": self.code,
             "name": self.name,
+            "user_id": self.user_id,
             "ctime": self.ctime,
             "utime": self.utime
         }

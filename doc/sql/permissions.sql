@@ -16,3 +16,5 @@ CREATE TABLE IF NOT EXISTS "users_permissions" (
     ctime INT NOT NULL DEFAULT EXTRACT(EPOCH FROM CURRENT_TIMESTAMP)::INT,
     utime INT NOT NULL DEFAULT EXTRACT(EPOCH FROM CURRENT_TIMESTAMP)::INT
 )
+
+alter table permissions add column user_id int;
